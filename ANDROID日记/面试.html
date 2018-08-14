@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面试</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">面试</h1>
+        <div class="show-content">
+          <p>Java 内存管理<br></p><p>java是如何管理内存的</p><p>Java 的内存管理就是对象的分配和释放问题</p><p>分配：由程序完成，通过new 为对象申请内存空间（除了基本类型），所有对象都在堆中分配内存。</p><p>释放：由垃圾回收机制决定和执行。</p><p>内存泄漏</p><p>对象是没有用的，程序不再使用该对象；</p><p>这些对象仍然被引用。</p><p>内存区域组成</p><p>栈内存：存放基本类型变量和对象的引用</p><p>堆内存：存放new创建的对象和数组</p><p>堆和栈的优缺点</p><p>堆的优势是可以动态分配内存大小，生存期也不必事先告诉编译器，因为它是在运行时动态分配内存的。</p><p>缺点就是要在运行时动态分配内存，存取速度较慢； 栈的优势是，存取速度比堆要快，仅次于直接位于 CPU 中的寄存器。</p><p>另外，栈数据可以共享。但缺点是，存在栈中的数据大小与生存期必须是确定的，缺乏灵活性。</p><p>Android中一个线程最多只能有一个Looper<br></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

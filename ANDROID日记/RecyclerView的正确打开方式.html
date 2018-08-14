@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecyclerView的正确打开方式</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">RecyclerView的正确打开方式</h1>
+        <div class="show-content">
+          <p>    RecyclerView 顾名思义，所做的工作就是回收再利用。将别的工作交给别人做，这样各司其职，大家都开心。</p><p>    RecyclerView所做的只是回收和定位屏幕上的itemView，那么就要有人为他提供数据和显示。那么就要得到这两个子类的支持：Adapter和ViewHolder。</p><p>    ViewHolder比较简单，做的事情比较少，先讲它。ViewHolder，按照名字就是hold住view的人，怎么个hold住法呢？来看下典型的代码：</p><p>public class ListRow extends RecyclerView.ViewHolder{</p><p>    public ImageView mThumbnail;</p><p>    public ListRow(View view){</p><p>        super(view);</p><p>        mThumbnail = (ImageView)view.findViewById(R.id.thumbnail);</p><p>    }<br></p><p>}<br></p><p>RecyclerView 本身不会创建View，但是会创建一个ViewHolder，viewHolder通过引用一个如ListRow的itemView来达到显示数据的目的。</p><p>接下来来讲Adapter，其实ViewHolder不是由RecyclerView创建的，实际上是由Adapter完成创建的。Adapter实际上起着一个数据和view之间沟通的一个桥梁的作用：从m中获取数据，并提供给RecyclerView显示。</p><p>Adapter的职责：</p><p>1. 创建必要的ViewHolder；</p><p>2. 将ViewHolder和数据绑定<br></p><p>接下来就要讲一个三个臭皮匠的故事。从前有个人叫RecyclerView，有一天，他接到一个项目，说要显示列表在屏幕上，但是他只会回收view呀，于是他想了一下，找到提供数据的Adapter先生，说，我不知道有多少个数据诶，麻烦你说个数吧，热心的adapter先生说100个，就走了，RecyclerView很开心，但是他的工作是回收view呀，现在没view，回收个pi啊，于是他又想起了热心的Adapter先生，找他说，可以再麻烦你给我ViewHolde吗，Adapter说是指itemView吗，好的，给你一个，RecyclerView得到ViewHolder后，正准备用的时候，发现没有绑定数据呀，找到Adapter说，帮我bindViewHolder下吧，当已经绑定数据的ViewHolder充满屏幕时候，RecyclerView就暂时不找Adapter啦，当屏幕滑动的时候，RecyclerView就回收掉消失的ViewHolder，解除他的数据，这时候，找Adapter说，可以再帮我绑定下数据吗，Adapter总是不厌其烦的应声答应，bindViewHolder给RecyclerView。 <br></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
