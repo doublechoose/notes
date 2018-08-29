@@ -1,0 +1,23 @@
+private SpannableStringBuilder formatUpdateText(String value) {
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
+        String previous = "您还需";
+        spannableStringBuilder.setSpan(new AbsoluteSizeSpan(dpToPx(14)), 0, spannableStringBuilder.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);//字体大小
+        spannableStringBuilder.append(previous);
+        spannableStringBuilder.append(value);
+        spannableStringBuilder.setSpan(
+                new ForegroundColorSpan(getResources().getColor(R.color.member_right_update_text_color)),
+                previous.length(), value.length() + previous.length(),
+                Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        /*设置字体大小*/
+        spannableStringBuilder.setSpan(
+                new AbsoluteSizeSpan(dpToPx(16)),
+                previous.length(), value.length() + previous.length(),
+                Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableStringBuilder.setSpan(
+                new StyleSpan(Typeface.BOLD),
+                previous.length(), value.length() + previous.length(),
+                Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableStringBuilder.append("个点\n 即可升级");
+
+        return spannableStringBuilder;
+    }
