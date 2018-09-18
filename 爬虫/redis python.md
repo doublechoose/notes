@@ -1238,3 +1238,25 @@ print(r.get("name"))
 print(r.get("role"))
 print(r.get("num"))
 ```
+
+获取redis 上所有的keys
+
+```
+keys *
+```
+
+删除所有的keys
+
+```
+r = redis.Redis(host='localhost',port=6379,decode_responses=True)
+
+# r.set('name','w')
+
+x = r.keys('180*')
+
+for i in x:
+    r.delete(i)
+
+print(x)
+```
+
