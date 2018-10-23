@@ -120,3 +120,12 @@ article.save()
 必须执行`Article.init()`方法。 这样Elasticsearch才会根据你的DocType产生对应的Mapping。否则Elasticsearch就会在你第一次创建Index和Type的时候根据你的内容建立对应的Mapping。
 
 现在我们可以通过Elasticsearch Restful API来检查
+
+
+启动 es
+elasticsearch 启动和停止
+
+```
+sudo systemctl start elasticsearch.service
+sudo systemctl stop elasticsearch.service
+```
