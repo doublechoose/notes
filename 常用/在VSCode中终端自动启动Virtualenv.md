@@ -31,6 +31,10 @@ Microsoft Windows [版本 6.1.7601]
 ```
 {
     "python.pythonPath": "C:\\Virtualenv\\py3env\\Scripts\\python.exe",
+    //或者这么设置
+    "python.venvPath": "D:\\QQPCmgr\\anaconda\\envs\\tensorflow\\python.exe",
+    "python.terminal.activateEnvironment": true
+
     "terminal.integrated.shellArgs.windows": ["/k", "C:\\Virtualenv\\py3env\\Scripts\\activate"]
 }
 ```

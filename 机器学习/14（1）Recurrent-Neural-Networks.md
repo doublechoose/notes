@@ -177,7 +177,7 @@ with tf.Session() as sess:
 
 ## 动态时间展开
 
-**dynamic_rnn()**方法使用了一个**while_loop()**操作来在单元上运行适当的次数，并且你可以设置swap_memory=True，如果你想在反向传播的时候让它交换GPU的内存给CPU的内存，以避免OOM错误。方便的，它还在每个时间步接受带有所有输入的单个张量（形状[None，n_steps，n_inputs]），并且在每个时间步输出所有输出的单个张量（形状[None，n_steps，n_neurons]）; 无需堆叠，取消堆叠或转置。 以下代码使用dynamic_rnn（）函数创建与之前相同的RNN。 它好多了！
+**dynamic_rnn()**方法使用了一个**while_loop()**操作来在单元上运行适当的次数，并且如果你想在反向传播的时候让它交换GPU的内存给CPU的内存，你可以设置swap_memory=True，以避免OOM错误。方便的，它还在每个时间步接受带有所有输入的单个张量（形状[None，n_steps，n_inputs]），并且在每个时间步输出所有输出的单个张量（形状[None，n_steps，n_neurons]）; 无需堆叠，取消堆叠或转置。 以下代码使用dynamic_rnn（）函数创建与之前相同的RNN。 它好多了！
 
 ```python
 X = tf.placeholder(tf.float32,[None,n_steps,n_inputs])
