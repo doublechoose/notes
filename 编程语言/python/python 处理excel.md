@@ -99,3 +99,14 @@ sheet.cell(row=3,column=5,value=100)
 **#****保存修改的文件**
 
 excel.save(*'E:/test.xlsx'*)
+
+
+
+使用openpyxl
+
+```
+d = table.cell(row=2,column=5).value
+d.strftime("%H:%M")
+
+```
+
