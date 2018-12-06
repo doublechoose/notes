@@ -87,7 +87,10 @@ pip install  --extra-index-url http://172.16.89.145:9010/simple/ aiutils --trust
 
 or
 
-pip install ai-utils -i http://172.16.89.145:9010/simple/  --trusted-host 172.16.89.145
+pip install ai-util -i http://172.16.89.145:9010/simple/  --trusted-host 172.16.89.145
 
 # -i 表示base url of python package index（default https://pypi.org/simple
+
+加 --upgrade 可以升级包
 ```
+
