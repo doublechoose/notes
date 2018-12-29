@@ -29,6 +29,6 @@ rm -r /tmp/npm*
 ```
 sudo npm install n -g
 
-
+sudo n stable
 ```
 
