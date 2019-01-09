@@ -2,7 +2,7 @@
 
 链接：http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
 
-
+代码例子：https://codepen.io/LandonSchropp/pen/KpzzGo
 
 你会看到，不管是什么布局，Flex往往都可以几行命令搞定。
 

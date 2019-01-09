@@ -90,6 +90,12 @@ scrapyd-deploy
 curl http://localhost:6800/schedule.json -d project=PROJECT_NAME -d spider=SPIDER_NAME
 ```
 
+查看爬虫列表：
+
+```
+curl http://localhost:6800/listspiders.json?project=myproject
+```
+
 
 
 ### 设置scrapyd成服务

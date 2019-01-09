@@ -20,6 +20,7 @@ url = http://localhost:6800/
 
 ```
 
+执行`scrapyd-deploy`
 
 
 使用api
