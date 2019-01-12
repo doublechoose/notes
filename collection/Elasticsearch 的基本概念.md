@@ -1,5 +1,7 @@
 # Elasticsearch 的基本概念
 
+端口号：9200
+
 - Index： 用来存储数据的逻辑区域，类似于关系型数据库中的database。一个index可以在一个或多个shard（碎片）上，同时一个shard也可能有多个replicas（副本）。
 - Document： 存储的实体数据，类似于关系数据的一个表里的一行数据。由多个field组成，不同的document里面同名的field一定具有相同的类型。document里的field可以重复出现，也就是一个field会有多个值。
 - Document type：为了查询需要，一个index可能有多种document，也就是document type。它类似于关系型数据库中的表概念。但需要注意，不同document里面同名的field一定要是相同类型的。
