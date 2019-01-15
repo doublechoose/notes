@@ -45,3 +45,10 @@ es  ALL=(ALL)       ALL  #这个是新增的用户
 wq退出
 收回写权限
 chmod -v u-w /etc/sudoers
+
+
+No such file or directory: 'xdg-open': 'xdg-open'
+
+```
+yum install xdg-utils
+```
