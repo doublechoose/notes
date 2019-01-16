@@ -44,6 +44,8 @@ setup(
     name = "wsdk",
     version = "1.0",
     py_modules=[''],
+    install_requires=['requests', 'zipline>=1.3.0',
+                      'pyyaml', 'pymysql', 'cn-stock-holidays'],
 )
 ```
 
