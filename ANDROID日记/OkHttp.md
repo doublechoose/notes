@@ -79,24 +79,3 @@ String post(String url, String json) throws IOException {
 compile 'com.squareup.okhttp3:okhttp:(insert latest version)'
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
